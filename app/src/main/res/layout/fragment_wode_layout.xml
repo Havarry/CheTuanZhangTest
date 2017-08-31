@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@color/colorWhite">
+            <TextView
+                android:id="@+id/wode_text"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="hi，欢迎来到车团长"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:src="@drawable/mine_login"
+                android:layout_marginLeft="33dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/wode_text"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:src="@drawable/mine_regist"
+                android:layout_marginLeft="33dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/wode_text"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="60dp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mine_set"
+                android:layout_marginLeft="350dp"
+                android:layout_marginTop="10dp"/>
+        </RelativeLayout>
+        <View
+            android:layout_marginTop="3dp"
+            style="@style/HorizonDividerLine"
+            android:layout_height="5dp"></View>
+
+        <RadioGroup
+            android:id="@+id/wode_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/my_order"
+                style="@style/TabRadioButton"
+                android:text="我的订单"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/mine_order_car"/>
+            <RadioButton
+                android:id="@+id/my_insur"
+                style="@style/TabRadioButton"
+                android:text="我的车险"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/mine_order_insur"/>
+            <RadioButton
+                android:id="@+id/my_finace"
+                style="@style/TabRadioButton"
+                android:text="我的车贷团"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/mine_order_finace"/>
+            <RadioButton
+                android:id="@+id/my_oldcar"
+                style="@style/TabRadioButton"
+                android:text="我的二手车"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/mine_order_oldcar"/>
+        </RadioGroup>
+
+        <View
+            android:layout_marginTop="5dp"
+            style="@style/HorizonDividerLine"
+            android:layout_height="5dp"></View>
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="我的福利"
+            android:textColor="@color/colorBlack"
+            android:paddingLeft="15dp"/>
+
+        <View
+            android:paddingLeft="15dp"
+            style="@style/HorizonDividerLine"
+            android:layout_height="1dp"></View>
+
+        <RadioGroup
+            android:id="@+id/wode_wodefuli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/my_shopping"
+                android:layout_width="0dp"
+                style="@style/TabRadioButton"
+                android:text="兑换商城"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/mine_shop"
+                />
+            <RadioButton
+            android:id="@+id/my_youhuijuan"
+            style="@style/TabRadioButton"
+            android:text="优惠券"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/mine_quan"/>
+            <RadioButton
+                android:id="@+id/my_carmoney"
+                style="@style/TabRadioButton"
+                android:text="车市币"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/orderdetail_jinbi"/>
+        </RadioGroup>
+
+        <View
+            android:layout_marginTop="5dp"
+            style="@style/HorizonDividerLine"
+            android:layout_height="5dp"></View>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mine_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp">
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/float_btn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="300dp"
+                        android:src="@drawable/welcome_btn_bg"/>
+
+                    <com.jude.rollviewpager.RollPagerView
+                        android:id="@+id/rolls"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        app:rollviewpager_play_delay="3000"
+                        >
+
+                    </com.jude.rollviewpager.RollPagerView>
+                </FrameLayout>
+
+                <View
+                    android:layout_height="2dp"
+                    style="@style/HorizonDividerLine">
+
+                </View>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+
+                <View
+                    android:layout_height="3dp"
+                    style="@style/HorizonDividerLine">
+                </View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/cheshitoutiao"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" />
+                    <View
+                        style="@style/VerticalDividerLine"></View>
+                    <ViewFlipper
+                        android:id="@+id/viewFlipper"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </ViewFlipper>
+                </LinearLayout>
+
+                <View
+                    android:layout_height="3dp"
+                    style="@style/HorizonDividerLine">
+                </View>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:padding="5dp"
+                    android:layout_gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorBlack"
+                        android:text="热门团购品牌"/>
+                    <TextView
+                        android:id="@+id/more_1"
+                        android:text="更多"
+                        android:textColor="#1456e6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_height="1dp"
+                    android:paddingTop="5dp"
+                    style="@style/HorizonDividerLine">
+                </View>
+
+                <android.support.v7.widget.RecyclerView
+                    android:paddingLeft="5dp"
+                    android:id="@+id/pinpai_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" 
+                        android:text="特价抢购"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="更多"
+                        android:textColor="#1456e6"
+                        android:id="@+id/more_2"
+                        />
+                </LinearLayout>
+                
+                <View
+                    style="@style/HorizonDividerLine"
+                    android:layout_height="1dp">
+                </View>
+
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

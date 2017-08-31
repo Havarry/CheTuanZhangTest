@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.han.demo1.car.activity.MainActivity">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_vp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+
+    </android.support.v4.view.ViewPager>
+    <View
+        style="@style/HorizonDividerLine"
+        android:layout_height="1dp"></View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/shouye"
+                android:checked="true"
+                style="@style/TabRadioButton"
+                android:textColor="@drawable/tab_selected_text"
+                android:drawableTop="@drawable/tab_selected_shouye"
+                android:text="首页"
+                 />
+            <RadioButton
+                android:id="@+id/rb_zixun"
+                style="@style/TabRadioButton"
+                android:textColor="@drawable/tab_selected_text"
+                android:drawableTop="@drawable/tab_selector_zixun"
+                android:text="咨询"/>
+
+            <RadioButton
+                android:id="@+id/wode"
+                style="@style/TabRadioButton"
+                android:textColor="@drawable/tab_selected_text"
+                android:drawableTop="@drawable/tab_selected_wode"
+                android:text="我的"/>
+            <RadioButton
+                android:id="@+id/shequ"
+                style="@style/TabRadioButton"
+                android:textColor="@drawable/tab_selected_text"
+                android:drawableTop="@drawable/tab_selected_shequ"
+                android:text="社区"
+                />
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>
